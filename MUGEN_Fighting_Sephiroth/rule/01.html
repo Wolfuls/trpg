@@ -1,0 +1,152 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+<title>戦闘ルール</title>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<link href="../css/lity-2.4.1/dist/lity.css" rel="stylesheet">
+<script src="../css/lity-2.4.1/dist/lity.js"></script></head>
+</head>
+<style>
+	.sample_box{
+	 margin:0 auto;
+	 overflow:hidden;
+	}
+	.sample_box img{
+	 transition:0.2s all;
+	}
+	.sample_box img:hover{
+	  transform:scale(1.1,1.1);
+	  transition:0.2s all;
+	}
+</style>
+<body width="100%" style="background:rgba(0,0,0,0.7);">
+<table style="background:rgba(0,0,0,0.7);" width="80%" align="center" border="1">
+	<tr>
+		<td>
+			<h1 align="left"><b>戦闘ルール</b></h1>
+			<hr size="2">
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h2><b>■戦闘中に取れる行動</b></h2>
+			<p>
+				【臨戦】【攻防】【術技】【移動】のいずれかを行うことができます。
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h3><b>●臨戦</b></h3>
+			<p>
+				拳や武器、あるいは特別な異能を構え、攻防に備えます。<br>
+				任意の枚数だけ山札からカードを引いて自らの【手札】とし、【引いた数×２】点だけ行動力を消費します。
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h3><b>●攻防</b></h3>
+			<p>
+				敵１体を対象に宣言できます。<br>
+				<font color="ffff00">対象と攻防を行う</font>アクションです。
+			</p>
+			<p>
+				まず、攻撃側が手札を４枚まで裏向きに並べ、<br>
+				守備側も同じように手札を４枚まで裏向きに並べます。<br>
+				この時、守備カードの枚数は攻撃カードの枚数以下でなければなりません。<br>
+				守備側はカードをセットせず以下の処理に移ることもできますが、<br>
+				守備側がカードがない状況は攻撃側の不戦勝となります。
+			</p>
+			<p>
+				その後、互いのカードを１枚ずつ表にし、カードごとの勝敗を競います。<br>
+				勝敗は基本的に<font color="ff8080">〈攻撃〉</font>→<font color="8080ff">〈迎撃〉</font>→<font color="80ff80">〈重撃〉</font>→<font color="ff8080">〈攻撃〉</font>→…の三すくみ（＋特殊カードの<font color="ffff80">〈連撃〉</font>）で、<br>
+				勝った側のカードが効果を適用します。両者が同じカードを提出した場合は効果を相殺します。
+			</p>
+				<table style="background:rgba(0,0,0,0.7);" align="center" width="80%" border="1">
+					<tr bgcolor="800000">
+						<td align="center" rowspan="2" width="100">
+							<font size="5">
+							<ruby><rb>攻撃</rb><rp>｛</rp><rt>アタック</rt><rp>｝</rp></ruby>
+							</font>
+						</td>
+						<td bgcolor="000000">
+							●〈重撃〉に勝利し、〈迎撃〉に敗北する。<br>
+							●相手に【攻撃力：弱】分のＨＰダメージを与える。
+						</td>
+					</tr>
+					<tr bgcolor="800000">
+						<td>
+							手にした武器や自らに備わっている異能、あるいは己の五体を頼みに攻撃を行います。<br>
+							機先を制するのに向いている反面、相手の防御を貫通するほどの威力はありません。
+						</td>
+					</tr>
+					<tr bgcolor="000080">
+						<td align="center" rowspan="2">
+							<font size="5">
+							<ruby><rb>迎撃</rb><rp>｛</rp><rt>ブロック</rt><rp>｝</rp></ruby>
+							</font>
+						</td>
+						<td bgcolor="000000">
+							●〈攻撃〉に勝利し、〈重撃〉に敗北する。
+							●この攻防中、相手の次の一手は強制失敗する。<br>
+							　また、【移動】を行うことができる。<br>
+							　（接敵を解除した場合、この攻防におけるお互いのアクションは全て自動失敗となる。）
+						</td>
+					</tr>
+					<tr bgcolor="000080">
+						<td>
+							敵の攻撃から自身を庇ったり、身躱しを試みます。<br>
+							成功すれば相手の態勢を崩すことができますが、威力や範囲の大きい攻撃には対処しきれない場合があります。
+						</td>
+					</tr>
+					<tr bgcolor="008000">
+						<td align="center" rowspan="2">
+							<font size="5">
+							<ruby><rb>重撃</rb><rp>｛</rp><rt>チャージ</rt><rp>｝</rp></ruby>
+							</font>
+						</td>
+						<td bgcolor="000000">
+							●〈迎撃〉に勝利し、〈攻撃〉に敗北する。
+							●相手に【攻撃力：強】分のＨＰダメージを与える。
+						</td>
+					</tr>
+					<tr>
+						<td bgcolor="008000">
+							「攻撃」と比較してより重く、威力のある攻撃を行います。<br>
+							敵の防御を破ることができますが、タメが大きいので先に攻撃されてしまうリスクがあります。
+						</td>
+					</tr>
+					<tr bgcolor="808000">
+						<td align="center" rowspan="2">
+							<font size="5">
+							<ruby><rb>連撃</rb><rp>｛</rp><rt>ダブル</rt><rp>｝</rp></ruby>
+							</font>
+						</td>
+						<td bgcolor="000000">
+							●捨て札の一番上にあるカード（スキルも同様）と同じ属性・効果になる。
+						</td>
+					</tr>
+					<tr>
+						<td bgcolor="808000">
+							現状の構えを維持し、同じ行動を連続で繰り出します。
+						</td>
+					</tr>
+				</table>
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h3><b>●術技</b></h3>
+			<p>
+				　【術技】の内、自ターンで発動できるもの（アクティブスキル）を発動できます。
+				　アクティブスキルに限りませんが、術技の行使には行動力を消費します。
+			</p>
+		</td>
+	</tr>
+</table>
+
+</body>
+</html>
