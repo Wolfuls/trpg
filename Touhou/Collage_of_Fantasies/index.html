@@ -3,46 +3,32 @@
 <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
 <meta http-equiv="Pragma" content="no-cache">
 <link rel="stylesheet" type="text/css" href="css/style.css">
-<title>幻想スクラップ</title>
+<title>少女間想 -Collage of Fantasies-</title>
 </head>
 
 
 <body id="randbg" text="#FFFFFF" background="image/mainbg.png" bgcolor="#000000">
 
-<header>
 	<div class="hamburger-menu">
 		<input type="checkbox" id="menu-btn-check">
 		<label for="menu-btn-check" class="menu-btn"><span></span></label>
 		<div class="menu-content">
-			<iframe name="b" src="menu.html" frameborder="0" width="100%" height="100%"></iframe>
+			<iframe name="menuwin" src="menu.html" frameborder="0" width="50%" height="100%"></iframe>
 		</div>
 	</div>
-</header>
-
-  <script>
-    // ページが完全に読み込まれた後に実行
-    window.addEventListener("load", function() {
-      var iframes = document.querySelectorAll('iframe'); // 全てのiframeを取得
-      iframes.forEach(function(iframe) { // 各iframeに対して処理を実行
-        var src = iframe.src;
-        var separator = (src.indexOf('?') > -1) ? '&' : '?';
-        iframe.src = src + separator + 't=' + new Date().getTime(); // タイムスタンプを追加
-      });
-    });
-  </script>
-
-
-<table border="0" cellpadding="3" valign="top" align="center">
+	
+<div class="container" width="100%">
+<table border="0" cellpadding="3" valign="top" align="center" width="100%">
 <tr valign="top">
 	<td>
-		<iframe name="menuwin" src="menu.html" frameborder="0" class="winb"></iframe>
+		<iframe name="menuwin" src="menu.html" frameborder="0" class="menuwin" width="100%"></iframe>
 	</td>
 	<td>
-		<iframe name="mainwin" src="top.html" frameborder="0" class="winc"></iframe>
+		<iframe name="mainwin" src="top.html" frameborder="0" class="mainwin" width="100%"></iframe>
 	</td>
 </tr>
 </table>
-
+</div>
 
 </body>
 </html>
